@@ -193,11 +193,11 @@ def format_qa_response(response):
 ## App setup ========================================================================
 with st.sidebar:
     with st.expander("Configuración"):
-        school_level = st.selectbox('Seleccione el Nivel escolar para las preguntas de la trivia',('Primaria', 'Secundaria', 'Bachillerato'))
+        school_level = st.selectbox('Seleccione el Nivel escolar para las preguntas de la trivia',('Primaria', 'Secundaria', 'Bachillerato'), index=1)
         if school_level == 'Secundaria':
-            school_year = st.selectbox('Seleccione el Año escolar para las preguntas de la trivia',('Primero', 'Segundo', 'Tercero'))
+            school_year = st.selectbox('Seleccione el Año escolar para las preguntas de la trivia',('Primero', 'Segundo', 'Tercero'), index=1)
         else:
-            school_year = st.selectbox('Seleccione el Año escolar para las preguntas de la trivia',('Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto'))
+            school_year = st.selectbox('Seleccione el Año escolar para las preguntas de la trivia',('Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto', 'Sexto'), index=1)
         ##request_delay = st.number_input("Pausa entre solicitudes a la API para evitar tasa limite de peticiones (segundos)", min_value=0.0, max_value=5.0, value=1.0, step=0.1)
         request_delay = 1.0		
         multiplier = st.number_input("Multiplicador de montos en el juego", min_value=1, max_value=8, value=1, step=1)
