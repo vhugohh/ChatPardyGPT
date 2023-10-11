@@ -8,7 +8,7 @@ import tiktoken
 import streamlit as st
 import reveal_slides as rs
 import streamlit_tags as stt
-import https://github.com/vhugohh/ChatPardyGPT/blob/main/functions
+import functions
 from io import BytesIO
 
 num_intro_slides = 3
